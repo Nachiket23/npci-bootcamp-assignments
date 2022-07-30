@@ -1,0 +1,62 @@
+
+{{name}}
+
+<p>Sales person List</p>
+
+<table border = "1" align="center">
+
+    <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Salary</th>
+    <th>SalesVolume</th>
+    </tr>
+    
+    <tr *ngFor="let temp of salesPersonList" [ngClass] = "{'metQuote' : temp.salary >= 20000,
+        'nonMetQuote' : temp.salary < 20000}">
+        <td>{{temp.firstName}}</td>
+        <td>{{temp.lastName}}</td>
+        <td>{{temp.email}}</td>
+        <td>{{temp.salary}}</td>
+        <td>{{temp.salesVolume}}</td>
+        <td>
+            <div *ngIf = "temp.salary>20000; else elseBlock">YES</div>
+            <ng-template #elseBlock>NO</ng-template>
+        </td>
+    </tr>
+</table>
+&nbsp;
+<div class="container" style="border: solid;">
+    &nbsp;
+<form #salesperson="ngForm"(ngSubmit)="onSubmit()" >
+    <div class="row">
+    <div class="col-sm-3"><label for="">Firstname</label></div>
+    <div class="col-sm-6"><input type="text"name="firstName"[(ngModel)] =formModel.firstName ></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">LastName</label></div>
+    <div class="col-sm-6"><input type="text"name="lastName"[(ngModel)] = formModel.lastName></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">email</label></div>
+    <div class="col-sm-6"><input type="text"name="email"[(ngModel)] = formModel.email></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">salary</label></div>
+    <div class="col-sm-6"><input type="text"name="salary"[(ngModel)] = formModel.salary></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">SalesVolume</label></div>
+    <div class="col-sm-6"><input type="text"name="salesVolume" [(ngModel)] = formModel.salesVolume></div>
+</div>
+<div class="row">
+    <div class="col-sm-3"><button type="submit">submit</button></div>
+</div>
+&nbsp;
+</form>
+</div>

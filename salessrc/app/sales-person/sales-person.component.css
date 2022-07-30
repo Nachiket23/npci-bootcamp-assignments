@@ -1,0 +1,10 @@
+.metQuote {
+    background-color: lightslategray;
+}
+.nonMetQuote {
+    background-color: rgb(145, 223, 227);
+}
+.container{
+    width: fit-content;
+    background-color: bisque;
+}

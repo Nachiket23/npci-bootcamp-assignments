@@ -1,0 +1,30 @@
+<p>dept-list works!</p>
+<div class="container">
+<table class="table  table-bordered table-stripped " border=solid >
+
+    <tr>
+    <th>DEPTNO</th>
+    <th>DNAME</th>
+    <th>LOCATION</th>
+    
+    </tr>
+    
+    <tr *ngFor="let dept of departments" >
+        <td>{{dept.deptno}}</td>
+        <td>{{dept.dname}}</td>
+        <td>{{dept.location}}</td>
+      
+    </tr>
+</table>
+
+<div class="addcategory">
+    <a type="button" routerLink="/categoryform" class="btn btn-dark">Add Department</a>
+
+    &nbsp;
+    &nbsp;
+    
+    <a routerLink="" type="button" class="btn btn-dark">Home</a>
+    <br>
+    </div>
+
+</div>

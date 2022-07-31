@@ -1,0 +1,30 @@
+<p>emp-list works!</p>
+<div class="container">
+&nbsp;
+<table class="table  table-bordered table-stripped " border=solid>
+
+    <tr>
+    <th>EMPNO</th>
+    <th>ENAME</th>
+    <th>JOB</th>
+    <th>HIREDATE</th>
+    <th>MANAGERID</th>
+    <th>SALARY</th>
+    <th>COMMISSION</th>
+    
+    </tr>
+    
+    <tr *ngFor="let emp of employees" >
+        <td>{{emp.empno}}</td>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.job}}</td>
+        <td>{{emp.hiredate}}</td>
+        <td>{{emp.managerID}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.commission}}</td>
+        
+    </tr>
+</table>
+&nbsp;
+<a routerLink="/empform" class="btn btn-dark">Add Employees</a>
+</div>

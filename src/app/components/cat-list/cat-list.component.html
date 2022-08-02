@@ -1,0 +1,38 @@
+<div class="container">
+     
+    &nbsp;
+    &nbsp;
+    <h4>Category List</h4>
+    <table class="table  table-bordered table-stripped " border=solid>
+        <tr>
+            <th>Category Id</th>
+            &nbsp;
+            &nbsp;
+            <th> Category Name</th>
+            
+            
+        </tr>
+
+        <tr *ngFor="let cat of categories"  >
+            <td>{{cat.categoryId}}</td>
+            &nbsp;
+            &nbsp;
+            <td>{{cat.categoryName}}</td>
+            
+           
+
+
+        </tr>
+    </table>
+
+    <div class="addcategory">
+        <a type="button" routerLink="/categoryform" class="btn btn-dark">Add Category</a>
+    
+        &nbsp;
+        &nbsp;
+        
+        <a routerLink="" type="button" class="btn btn-dark">Home</a>
+        <br>
+        </div>
+
+    </div>

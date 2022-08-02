@@ -1,0 +1,32 @@
+<div class="container">
+
+    <br>
+    <div class="row">
+        <h4>Category Form</h4>
+    </div>
+    
+    <form  #category="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-sm-3"><label for="">Category Id</label></div>
+            <div class="col-sm-6"><input type="number" name="categoryId" [(ngModel)]=formModel.categoryId></div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3"><label for="">Category name</label></div>
+            <div class="col-sm-6"><input type="text" name="categoryName"[(ngModel)]=formModel.categoryName></div>
+        </div>
+        &nbsp;
+       
+
+        <div class="row">
+            <div class="col-sm-3"><button type="submit" class="btn btn-success">submit</button></div>
+            
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-auto"><a routerLink="/categories" class="btn btn-secondary">Category List</a></div>
+            <div class="col-sm-3"><a routerLink="" class="btn btn-secondary">Home</a></div>
+        
+        </div>
+    </form>
+</div>

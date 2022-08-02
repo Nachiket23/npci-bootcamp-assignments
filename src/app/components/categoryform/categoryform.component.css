@@ -1,0 +1,9 @@
+.container{
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(250, 213, 108);
+    padding: 10px;
+    margin-top: 80px;
+    background-color: rgb(171, 164, 155);
+    width: fit-content;
+}

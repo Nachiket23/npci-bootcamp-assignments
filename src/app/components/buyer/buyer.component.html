@@ -1,0 +1,84 @@
+
+  <!-- <div class="container">
+    <div class="row align-items-start" id="product">
+        <div class="col-3" *ngFor="let pro of product">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{pro.proname}}</h5>
+  
+              <a ><img src="{{pro.imageurl}}" class="card-img-top" alt="..."></a>
+              <p class="card-text">{{pro.description}}</p>
+              <h6>Price</h6>
+             
+              <p style="color: green;">{{pro.unitprice}}</p>
+  
+              <button type="button" class="btn btn-warning"><a  target="_blank" class="card-link">Buy
+                  Now</a></button>
+  
+              </div>
+          </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"><a routerLink="" class="btn btn-dark">Home</a></div>
+        &nbsp;
+        <div class="col-sm-3"><a routerLink="/cart" class="btn btn-warning">Cart</a></div>
+    </div>
+    <div class="row align-items-start" id="product">
+        <div class="col-4" *ngFor="let pro of product">
+            &nbsp;
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+
+                    <a><img src="{{pro.imageurl}}" class="card-img-top" alt="..."></a>
+                    <p class="card-text">{{pro.proname}}</p>
+                    <h6>Price</h6>
+
+                    <p style="color: green;">{{pro.unitprice}}</p>
+
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Buy now
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Description</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <img src="{{pro.imageurl}}" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="row">
+                                        <p>{{pro.description}}</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning"
+                                        data-bs-dismiss="modal">Add to Cart</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+       
+
+
+ 
